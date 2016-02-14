@@ -1,0 +1,23 @@
+{
+  "name": "introduction_to_less_and_more",
+  "version": "1.0.0",
+  "description": "an introduction to less, nodejs, npm and gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roblum/introduction_to_less_and_more.git"
+  },
+  "author": "roblum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roblum/introduction_to_less_and_more/issues"
+  },
+  "homepage": "https://github.com/roblum/introduction_to_less_and_more",
+  "devDependencies": {
+    "reveal": "0.0.4",
+    "webpack": "^1.12.13"
+  }
+}
