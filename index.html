@@ -137,7 +137,7 @@ gulp.task('default', ['watch']);
 
                 <section class="less-examples-section">
                     <section class="less-variables-section">
-                <p>less stylesheet</p>
+                    <p>less stylesheet</p>
 <pre><code>
 @neonGreen: #39FF14;
 
@@ -163,7 +163,6 @@ p {
     border-top: dotted 1px black;
     border-bottom: solid 2px black;
 }
-
 .custom-container {
     font-size: 14px;
     .bordered;
@@ -175,7 +174,6 @@ p {
     border-top: dotted 1px black;
     border-bottom: solid 2px black;
 }
-
 .custom-container {
     font-size: 14px;
     border-top: dotted 1px black;
@@ -194,6 +192,10 @@ p {
     h1 {
         font-size: 16px;
         font-weight: normal;
+
+        &:hover {
+            background: #000;
+        }
     }
 }
 </code></pre>
@@ -202,13 +204,34 @@ p {
 .container {
     width: 100%;
 }
-
 .container h1 {
     font-size: 16px;
     font-weight: normal;
 }
+.container h1:hover {
+    background: #000;
+}
 </code></pre>
                         <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
+                    </section>
+
+                    <section>
+                        <p>Arithmetical operations</p>
+                        <p>+, -, *, /</p>
+                        <p>(addition, subtraction, multiplication, division) are supported on any number, color or variable.</p>
+<pre><code>
+@conatinerHeight: 100px + 100px;            // result is 200px
+@containerWidth: @containerHeight - 50px;   // result is 50px
+@base: 5%;
+@longBase: @base * 2;                       // result is 10%
+</code></pre>
+                        <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
+                    </section>
+
+                    <section>
+                        <p>Functions</p>
+<pre><code>
+</code></pre>
                     </section>
 
                     <section class="less-import-section">
@@ -217,6 +240,7 @@ p {
 @import "reset";
 @import "dark-theme";
 </code></pre>
+                        <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
                     </section>
                 </section>
             </div>
