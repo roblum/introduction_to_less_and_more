@@ -13,48 +13,83 @@
     <body>
         <div class="reveal">
             <div class="slides">
-                <section>
-                    <h1>Node.js</h1>
-                    <p class="node-green">Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.</p>
-                    <p class="node-green">Install <a href="https://nodejs.org/en/">here</a></p>
+
+                <section data-background="#234577" class="less-section">
+                    <img src="images/less-logo.png" />
+                    <p>Less is a CSS pre-processor, extending the CSS language.</p>
+                    <p>It can be used client side via a script file or on the command line using npm.</p>
                 </section>
 
-                <section data-transition="slide" data-background="#cb3837" data-background-transition="zoom">
-                    <h1>Npm</h1>
-                    <p>Node.js includes a package manager called <a href="https://www.npmjs.com/">Npm</a>.</p>
+                <section class="setup-project-section">
+                    <p>We will be setting up a project using:</p>
+                    <div class="dependencies-logo-container">
+                        <img src="images/nodejs-logo.svg" />
+                        <img src="images/npm-logo.svg" />
+                        <img src="images/gulp-logo.svg" />
+                        <img src="images/less-logo.png" />
+                    </div>
                 </section>
 
-                <section>
-<pre><code>{
-  "name": "ga-less",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/roblum"
-  },
-  "author": "roblum",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-less": "^3.0.5",
-    "gulp-watch": "^4.3.5"
-  }
-}</code></pre>
+                <section class="node-section">
+                    <img src="images/nodejs-logo.svg" />
+                    <p>Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Install <a href="https://nodejs.org/en/" target="_blank">here</a>.</p>
+                    <a class="link-text">(https://nodejs.org/en/)</a>
+                </section>
+
+                <section data-transition="slide" data-background="#cb3837" data-background-transition="zoom" class="npm-section">
+                    <img src="images/npm-logo.svg" />
+                    <p>Node.js comes with a package manager called <a href="https://www.npmjs.com/" target="_blank">npm</a>.</p>
                 </section>
 
                 <section>
-                    <h1>Less</h1>
-                    <pre><code class="hljs" data-trim>
-<script src="less.js"></script>
-This will find any less style tags on the page
+                    <p>Let's start our project.</p>
+                </section>
 
-<link rel="stylesheet/less" type="text/css" href="styles.less" />
-                    </code></pre>
+                <section>
+<pre><code>
+    ➜ cd ~/Documents/
+    ➜ mkdir less_project && cd less_project
+    ➜ npm init
+</code></pre>
+                </section>
+
+                <section>
+<pre><code>
+    name: (less_project)
+    version: (1.0.0)
+    description: my less project
+    entry point: (index.js)
+    test command:
+    git repository: http://github.com/roblum
+    keywords:
+    author: roblum
+    license: (ISC)
+    About to write to /Users/roblum/Documents/less_project/package.json:
+
+    {
+      "name": "less_project",
+      "version": "1.0.0",
+      "description": "my less project",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "author": "",
+      "license": "ISC"
+    }
+
+    Is this ok? (yes) yes
+</code></pre>
+                </section>
+
+                <section data-background="#cf4646" class="gulp-section" data-background-transition="zoom">
+                    <img src="images/gulp-logo.svg" />
+                    <p>Gulp is a toolkit that helps you automate painful or time-consuming tasks in your development workflow.</p>
+                </section>
+
+
+                <section>
+                    <p></p>
                 </section>
             </div>
         </div>
