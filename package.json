@@ -4,7 +4,8 @@
   "description": "an introduction to less, nodejs, npm and gulp",
   "main": "index.js",
   "scripts": {
-    "watch": "webpack --progress --colors --watch"
+    "watch": "webpack --progress --colors --watch",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
