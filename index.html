@@ -9,16 +9,52 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-        <link rel="stylesheet" href="reveal/css/reveal.css">
     </head>
     <body>
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <h1>this is a test slide 1</h1>
+                    <h1>Node.js</h1>
+                    <p class="node-green">Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.</p>
+                    <p class="node-green">Install <a href="https://nodejs.org/en/">here</a></p>
                 </section>
+
+                <section data-transition="slide" data-background="#cb3837" data-background-transition="zoom">
+                    <h1>Npm</h1>
+                    <p>Node.js includes a package manager called <a href="https://www.npmjs.com/">Npm</a>.</p>
+                </section>
+
                 <section>
-                    <h1>this is a test slide 2</h1>
+<pre><code>{
+  "name": "ga-less",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/roblum"
+  },
+  "author": "roblum",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.5",
+    "gulp-watch": "^4.3.5"
+  }
+}</code></pre>
+                </section>
+
+                <section>
+                    <h1>Less</h1>
+                    <pre><code class="hljs" data-trim>
+<script src="less.js"></script>
+This will find any less style tags on the page
+
+<link rel="stylesheet/less" type="text/css" href="styles.less" />
+                    </code></pre>
                 </section>
             </div>
         </div>

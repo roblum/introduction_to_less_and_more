@@ -3,6 +3,12 @@ var config = {
     output: {
         path: './js/',
         filename: 'bundle.js'
+    },
+    module: {
+        loaders: [
+            { test: /\.less$/, loader: "style!css!less" },
+            { test: /\.(eot|woff|ttf|svg)$/, loader: 'file' }
+        ]
     }
 };
 

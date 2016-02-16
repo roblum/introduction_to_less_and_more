@@ -4,7 +4,7 @@
   "description": "an introduction to less, nodejs, npm and gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "webpack --progress --colors --watch"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,12 @@
   },
   "homepage": "https://github.com/roblum/introduction_to_less_and_more",
   "devDependencies": {
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "less": "^2.6.0",
+    "less-loader": "^2.2.2",
     "reveal": "0.0.4",
+    "style-loader": "^0.13.0",
     "webpack": "^1.12.13"
   }
 }

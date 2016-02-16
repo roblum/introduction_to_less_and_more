@@ -1,4 +1,5 @@
 var Reveal = require('reveal');
+require('../styles/index.less');
 
 Reveal.initialize({
     controls: true,
@@ -6,4 +7,7 @@ Reveal.initialize({
     history: true,
     center: true,
     transition: 'slide',
+    dependencies: [
+        { src: 'lib/highlight.js', aync: true, callback: function() { hljs.initHighlightingOnLoad(); }}
+    ]
 });
