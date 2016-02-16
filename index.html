@@ -60,16 +60,16 @@
                     </section>
 
                     <section>
-<pre><code>
+                        <pre><code>
     ➜ cd ~/Documents/
     ➜ mkdir less_project && cd less_project
     ➜ npm init
-</code></pre>
+                        </code></pre>
                         <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
                     </section>
 
                     <section>
-<pre><code>
+                        <pre><code>
     name: (less_project)
     version: (1.0.0)
     description: my less project
@@ -94,7 +94,7 @@
     }
 
     Is this ok? (yes) yes
-</code></pre>
+                        </code></pre>
                     </section>
                 </section>
 
@@ -106,141 +106,149 @@
                     </section>
 
                     <section>
-<pre><code>
-➜ npm install gulp --save-dev
-</code></pre>
+                        <pre><code>
+    ➜ npm install gulp --save-dev
+                        </code></pre>
                         <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
                     </section>
 
                     <section>
-<pre><code>
-var gulp = require('gulp');
-var less = require('gulp-less');
-var watch = require('gulp-watch');
+                        <p>gulpfile.js</p>
+                        <pre><code>
+    var gulp = require('gulp');
+    var less = require('gulp-less');
+    var watch = require('gulp-watch');
 
-gulp.task('compile-less', function () {
-    return gulp.src('./less/styles.less') // path to your file
-        .pipe(less())
-        .pipe(gulp.dest('./styles/'));
-});
+    gulp.task('compile-less', function () {
+        return gulp.src('./less/styles.less') // path to your file
+            .pipe(less())
+            .pipe(gulp.dest('./styles/'));
+    });
 
-gulp.task('watch', function() {
-    // Watch all the .less files, then run the less task
-    gulp.watch('./**/*.less', ['compile-less']);
-});
+    gulp.task('watch', function() {
+        // Watch all the .less files, then run the less task
+        gulp.watch('./**/*.less', ['compile-less']);
+    });
 
-// Default will run the 'entry' watch task
-gulp.task('default', ['watch']);
-</code></pre>
+    // Default will run the 'entry' watch task
+    gulp.task('default', ['watch']);
+                        </code></pre>
                     </section>
                 </section>
 
                 <section class="less-examples-section">
                     <section class="less-variables-section">
-                    <p>less stylesheet</p>
-<pre><code>
-@neonGreen: #39FF14;
+                        <p>Variables</p>
+                        <pre><code>    // less stylesheet
+    @neonGreen: #39FF14;
 
-p {
-    color: @neonGreen;
-    border: 1px solid @neonGreen;
-}
-</code></pre>
-                <p>css compiled stylesheet</p>
-<pre><code>
-p {
-    color: #39FF14;
-    border: 1px solid #39FF14;
-}
-</code></pre>
+    p {
+        color: @neonGreen;
+        border: 1px solid @neonGreen;
+    }
+                        </code></pre>
+                        <pre><code>    // css compiled stylesheet
+    p {
+        color: #39FF14;
+        border: 1px solid #39FF14;
+    }
+                        </code></pre>
                         <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
                     </section>
 
                     <section class="less-mixins-section">
-                <p>less stylesheet</p>
-<pre><code>
-.bordered {
-    border-top: dotted 1px black;
-    border-bottom: solid 2px black;
-}
-.custom-container {
-    font-size: 14px;
-    .bordered;
-}
-</code></pre>
-                <p>css compiled stylesheet</p>
-<pre><code>
-.bordered {
-    border-top: dotted 1px black;
-    border-bottom: solid 2px black;
-}
-.custom-container {
-    font-size: 14px;
-    border-top: dotted 1px black;
-    border-bottom: solid 2px black;
-}
-</code></pre>
+                        <p>Mixins</p>
+                        <pre><code>    // less stylesheet
+    .bordered {
+        border-top: dotted 1px black;
+        border-bottom: solid 2px black;
+    }
+    .custom-container {
+        font-size: 14px;
+        .bordered;
+    }
+                        </code></pre>
+                        <pre><code>    // css compiled stylesheet
+    .bordered {
+        border-top: dotted 1px black;
+        border-bottom: solid 2px black;
+    }
+    .custom-container {
+        font-size: 14px;
+        border-top: dotted 1px black;
+        border-bottom: solid 2px black;
+    }
+                        </code></pre>
                         <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
                     </section>
 
                     <section class="less-nested-rules-section">
-                <p>less stylesheet</p>
-<pre><code>
-.container {
-    width: 100%;
+                        <p>Nested Rules</p>
+                        <pre><code>    // less stylesheet
+    .container {
+        width: 100%;
 
-    h1 {
-        font-size: 16px;
-        font-weight: normal;
+        h1 {
+            font-size: 16px;
+            font-weight: normal;
 
-        &:hover {
-            background: #000;
+            &:hover { // & represents the current selector parent
+                background: #000;
+            }
         }
     }
-}
-</code></pre>
-                <p>css compiled stylesheet</p>
-<pre><code>
-.container {
-    width: 100%;
-}
-.container h1 {
-    font-size: 16px;
-    font-weight: normal;
-}
-.container h1:hover {
-    background: #000;
-}
-</code></pre>
+                        </code></pre>
+                        <pre><code>    // css compiled stylesheet
+    .container {
+        width: 100%;
+    }
+    .container h1 {
+        font-size: 16px;
+        font-weight: normal;
+    }
+    .container h1:hover {
+        background: #000;
+    }
+                        </code></pre>
                         <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
                     </section>
 
                     <section>
-                        <p>Arithmetical operations</p>
-                        <p>+, -, *, /</p>
-                        <p>(addition, subtraction, multiplication, division) are supported on any number, color or variable.</p>
-<pre><code>
-@conatinerHeight: 100px + 100px;            // result is 200px
-@containerWidth: @containerHeight - 50px;   // result is 50px
-@base: 5%;
-@longBase: @base * 2;                       // result is 10%
-</code></pre>
+                        <p>Arithmetical operations<p>
+                        <!-- <p>(addition, subtraction, multiplication, division) </p> -->
+                        <pre><code>    // +, -, *, / are supported on any number, color or variable.
+    @conatinerHeight: 100px + 100px;            // result is 200px
+    @containerWidth: @containerHeight - 50px;   // result is 50px
+    @base: 5%;
+    @longBase: @base * 2;                       // result is 10%
+                        </code></pre>
+
                         <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
                     </section>
 
                     <section>
                         <p>Functions</p>
-<pre><code>
-</code></pre>
+                        <p></p>
+                        <pre><code>    // Color Functions
+    @primaryColor: #02549C;
+    @primaryColorLight: lighten(@primaryColor, 20%);
+    @mixedTheme: mix(@primaryColor, #F1D80C, 50%);
+
+    // Math Functions
+    @absoluteHeight: abs(-25cm);    // result is 25cm
+    @windowWidth: floor(786.50px);  // result is 786px
+
+    // More functions at http://lesscss.org/functions/
+                        </code></pre>
+                        <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
                     </section>
 
                     <section class="less-import-section">
-                <p>styles.less</p>
-<pre><code>
-@import "reset";
-@import "dark-theme";
-</code></pre>
-                        <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
+                        <p>Importing</p>
+                        <pre><code>    // styles.less
+    @import "reset";
+    @import "dark-theme";
+                        </code></pre>
                     </section>
                 </section>
             </div>
