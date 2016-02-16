@@ -85,11 +85,36 @@
                 <section data-background="#cf4646" class="gulp-section" data-background-transition="zoom">
                     <img src="images/gulp-logo.svg" />
                     <p>Gulp is a toolkit that helps you automate painful or time-consuming tasks in your development workflow.</p>
+
+                    <!-- <p>Gulp.js is what we call a JavaScript Task Runner, it is Open Source and available on GitHub. It helps you automate repetitive tasks such as minification, compilation, unit testing, linting, etc.</p> -->
                 </section>
 
+                <section>
+<pre><code>
+➜ npm install gulp --save-dev</p>
+</code></pre>
+                </section>
 
                 <section>
-                    <p></p>
+<pre><code>
+var gulp = require('gulp');
+var less = require('gulp-less');
+var watch = require('gulp-watch');
+
+gulp.task('compile-less', function () {
+    return gulp.src('./less/styles.less') // path to your file
+        .pipe(less())
+        .pipe(gulp.dest('./styles/'));
+});
+
+gulp.task('watch', function() {
+    // Watch all the .less files, then run the less task
+    gulp.watch('./**/*.less', ['compile-less']);
+});
+
+// Default will run the 'entry' watch task
+gulp.task('default', ['watch']);
+</code></pre>
                 </section>
             </div>
         </div>
