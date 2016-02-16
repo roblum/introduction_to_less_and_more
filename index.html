@@ -20,8 +20,20 @@
                     <p>It can be used client side via a script file or on the command line using npm.</p>
                 </section>
 
-                <section class="setup-project-section">
-                    <p>We will be setting up a project using:</p>
+                <section data-background="#234577" class="less-features-section">
+                    <p>Some features of less include:</p>
+                    <ul>
+                        <li>Variables</li>
+                        <li>Mixins</li>
+                        <li>Nested rules</li>
+                        <li>Operations</li>
+                        <li>Functions</li>
+                        <li>Importing</li>
+                    </ul>
+                </section>
+
+                <section class="dependencies-section">
+                    <p>What we'll be using to setup our project:</p>
                     <div class="dependencies-logo-container">
                         <img src="images/nodejs-logo.svg" />
                         <img src="images/npm-logo.svg" />
@@ -41,19 +53,22 @@
                     <p>Node.js comes with a package manager called <a href="https://www.npmjs.com/" target="_blank">npm</a>.</p>
                 </section>
 
-                <section>
-                    <p>Let's start our project.</p>
-                </section>
+                <section class="setup-project-section">
+                    <section>
+                        <p>Let's start our project.</p>
+                        <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
+                    </section>
 
-                <section>
+                    <section>
 <pre><code>
     ➜ cd ~/Documents/
     ➜ mkdir less_project && cd less_project
     ➜ npm init
 </code></pre>
-                </section>
+                        <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
+                    </section>
 
-                <section>
+                    <section>
 <pre><code>
     name: (less_project)
     version: (1.0.0)
@@ -80,22 +95,24 @@
 
     Is this ok? (yes) yes
 </code></pre>
+                    </section>
                 </section>
 
                 <section data-background="#cf4646" class="gulp-section" data-background-transition="zoom">
-                    <img src="images/gulp-logo.svg" />
-                    <p>Gulp is a toolkit that helps you automate painful or time-consuming tasks in your development workflow.</p>
+                    <section>
+                        <img src="images/gulp-logo.svg" />
+                        <p>Gulp is a JavaScript Task Runner that helps you automate painful or time-consuming tasks in your development workflow. (i.e. minification, compilation, unit testing, linting, etc...)</p>
+                        <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
+                    </section>
 
-                    <!-- <p>Gulp.js is what we call a JavaScript Task Runner, it is Open Source and available on GitHub. It helps you automate repetitive tasks such as minification, compilation, unit testing, linting, etc.</p> -->
-                </section>
-
-                <section>
+                    <section>
 <pre><code>
-➜ npm install gulp --save-dev</p>
+➜ npm install gulp --save-dev
 </code></pre>
-                </section>
+                        <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
+                    </section>
 
-                <section>
+                    <section>
 <pre><code>
 var gulp = require('gulp');
 var less = require('gulp-less');
@@ -115,6 +132,92 @@ gulp.task('watch', function() {
 // Default will run the 'entry' watch task
 gulp.task('default', ['watch']);
 </code></pre>
+                    </section>
+                </section>
+
+                <section class="less-examples-section">
+                    <section class="less-variables-section">
+                <p>less stylesheet</p>
+<pre><code>
+@neonGreen: #39FF14;
+
+p {
+    color: @neonGreen;
+    border: 1px solid @neonGreen;
+}
+</code></pre>
+                <p>css compiled stylesheet</p>
+<pre><code>
+p {
+    color: #39FF14;
+    border: 1px solid #39FF14;
+}
+</code></pre>
+                        <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
+                    </section>
+
+                    <section class="less-mixins-section">
+                <p>less stylesheet</p>
+<pre><code>
+.bordered {
+    border-top: dotted 1px black;
+    border-bottom: solid 2px black;
+}
+
+.custom-container {
+    font-size: 14px;
+    .bordered;
+}
+</code></pre>
+                <p>css compiled stylesheet</p>
+<pre><code>
+.bordered {
+    border-top: dotted 1px black;
+    border-bottom: solid 2px black;
+}
+
+.custom-container {
+    font-size: 14px;
+    border-top: dotted 1px black;
+    border-bottom: solid 2px black;
+}
+</code></pre>
+                        <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
+                    </section>
+
+                    <section class="less-nested-rules-section">
+                <p>less stylesheet</p>
+<pre><code>
+.container {
+    width: 100%;
+
+    h1 {
+        font-size: 16px;
+        font-weight: normal;
+    }
+}
+</code></pre>
+                <p>css compiled stylesheet</p>
+<pre><code>
+.container {
+    width: 100%;
+}
+
+.container h1 {
+    font-size: 16px;
+    font-weight: normal;
+}
+</code></pre>
+                        <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
+                    </section>
+
+                    <section class="less-import-section">
+                <p>styles.less</p>
+<pre><code>
+@import "reset";
+@import "dark-theme";
+</code></pre>
+                    </section>
                 </section>
             </div>
         </div>
