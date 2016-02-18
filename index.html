@@ -61,9 +61,9 @@
 
                     <section>
                         <pre><code>
-    ➜ cd ~/Documents/
-    ➜ mkdir less_project && cd less_project
-    ➜ npm init
+    ➜ (~) cd ~/Documents/
+    ➜ (Documents) mkdir less_project && cd less_project
+    ➜ (less_project) npm init
                         </code></pre>
                         <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
                     </section>
@@ -82,15 +82,15 @@
     About to write to /Users/roblum/Documents/less_project/package.json:
 
     {
-      "name": "less_project",
-      "version": "1.0.0",
-      "description": "my less project",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC"
+        "name": "less_project",
+        "version": "1.0.0",
+        "description": "my less project",
+        "main": "index.js",
+        "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        "author": "",
+        "license": "ISC"
     }
 
     Is this ok? (yes) yes
@@ -107,9 +107,9 @@
 
                     <section>
                         <pre><code>
-    ➜ npm install gulp --save-dev
-    ➜ npm install gulp-less --save-dev
-    ➜ npm install gulp-watch --save-dev
+    ➜ (less_project) npm install gulp --save-dev
+    ➜ (less_project) npm install gulp-less --save-dev
+    ➜ (less_project) npm install gulp-watch --save-dev
                         </code></pre>
                         <a href="#" class="navigate-down enabled"><img src="images/down-arrow.svg" /></a>
                     </section>
@@ -139,6 +139,13 @@
                 </section>
 
                 <section class="less-examples-section">
+                    <section>
+                        <p>Now let's create a styles.less file inside a folder called ./less/</p>
+                        <pre><code>
+    ➜ (less_project) mkdir less && cd less
+    ➜ (less_project) touch styles.less
+                        </code></pre>
+                    </section>
                     <section class="less-variables-section">
                         <p>Variables</p>
                         <pre><code>    // less stylesheet
