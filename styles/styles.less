@@ -1,14 +1,12 @@
 @import "zenburn";
 @import "reveal_reset";
 
+@gray: #93a1a1;
+@green: #80bd01;
+@orange: #FF8326;
+
 .reveal {
     section {
-        img {
-            border: 0px;
-            box-shadow: none;
-            background: none;
-        }
-
         .dependencies-logo-container img {
             width: 12%;
             display: inline-block;
@@ -17,17 +15,19 @@
         }
     }
 
-    pre code {
-        max-height: 500px;
-    }
-
     a.link-text {
-        color: #93a1a1;
+        color: @gray;
     }
 
     .node-section {
         p {
-            color: #80bd01;
+            color: @green;
+        }
+    }
+
+    .less-examples-section {
+        p span {
+            color: @orange;
         }
     }
 }
